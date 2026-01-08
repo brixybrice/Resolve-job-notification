@@ -1,4 +1,4 @@
- DaVinci Resolve Render Notifications
+**DaVinci Resolve Render Notifications**
 
 Slack & macOS notifications for Deliver render jobs
 
@@ -8,7 +8,7 @@ It is designed for professional post-production workflows, with an emphasis on r
 
 ⸻
 
-Features
+**Features**
 	•	Triggered automatically at the end of a render job (Deliver page)
 	•	Sends a concise Slack notification
 	•	Displays a native macOS notification (no external tools required)
@@ -47,7 +47,7 @@ Installation
 
 Copy the script into the Deliver scripts folder:
 
-~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Deliver/
+>~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Deliver/
 
 Example structure:
 
@@ -70,12 +70,13 @@ Edit the file before running again.
 Configuration File
 
 resolve_slack_settings/resolve_slack_settings.json
+```
 {
   "slack_token": "xoxb-REPLACE_WITH_YOUR_TOKEN",
   "channel_name": "C0123456789",
   "log_directory": "~/Desktop"
 }
-
+```
 Configuration fields
 	•	slack_token
 Slack Bot User OAuth Token (xoxb-...)
