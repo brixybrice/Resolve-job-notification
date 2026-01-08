@@ -116,6 +116,8 @@ The script automatically generates filenames:
 4. Select the script (job_notif.py)
 5. Save this as a Render Preset (recommended)
 
+![Resolve Deliver > Video > Advanced > Script](/README/resolve_deliver_script.png)
+
 Every render using this preset will trigger notifications automatically.
 
 ⸻
