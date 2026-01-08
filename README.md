@@ -3,6 +3,8 @@
 
 A lightweight and robust Python script for **DaVinci Resolve (macOS)** that sends a **minimal Slack message** and a **native macOS notification** when a render job finishes in the Deliver page.
 
+![Slack Notification Image](/README/slack_notif_img.png)
+
 ---
 
 ## Features
