@@ -1,27 +1,27 @@
-**DaVinci Resolve Render Notifications**
+# DaVinci Resolve Render Notifications  
+### Slack & macOS notifications for Deliver render jobs
 
-Slack & macOS notifications for Deliver render jobs
+A lightweight and robust Python script for **DaVinci Resolve (macOS)** that sends a **minimal Slack message** and a **native macOS notification** when a render job finishes in the Deliver page.
 
-This project provides a robust Python script for DaVinci Resolve (macOS) that sends a minimal Slack message and a native macOS notification whenever a render job finishes in the Deliver page.
+This project is designed for **professional post-production workflows**, with an emphasis on reliability, clarity, and zero noise.
 
-It is designed for professional post-production workflows, with an emphasis on reliability, clarity, and zero noise.
+---
 
-⸻
+## Features
 
-**Features**
-	•	Triggered automatically at the end of a render job (Deliver page)
-	•	Sends a concise Slack notification
-	•	Displays a native macOS notification (no external tools required)
-	•	External JSON configuration file (no secrets hardcoded)
-	•	Automatic creation of the config file if missing
-	•	Daily log files with date-based naming
-	•	Optional automatic installation of slack_sdk
-	•	Fully compatible with DaVinci Resolve Deliver scripts on macOS
-	•	Defensive logging and clear error reporting
+- Triggered automatically at the **end of a render job**
+- Sends a **concise Slack notification**
+- Displays a **native macOS notification** (via `osascript`)
+- External **JSON configuration file** (no secrets hardcoded)
+- Automatic creation of the config file if missing
+- Daily log files with **date-based naming**
+- Optional automatic installation of `slack_sdk`
+- Fully compatible with **DaVinci Resolve Deliver scripts on macOS**
+- Defensive logging and clear error reporting
 
-⸻
+---
 
-Example Slack Message
+## Example Slack Message
 
 Complete [MyProject] Timeline_01 → master_prores.mov
 
@@ -29,46 +29,50 @@ In case of failure:
 
 Failed [MyProject] Timeline_01 → master_prores.mov (Error: ...)
 
+---
 
-⸻
+## Requirements
 
-Requirements
-	•	macOS
-	•	DaVinci Resolve (Deliver page scripting enabled)
-	•	Python environment bundled with DaVinci Resolve
-	•	Slack Bot Token with chat:write scope
-	•	Internet access for Slack notifications
+- macOS
+- DaVinci Resolve (Deliver page scripting enabled)
+- Python environment bundled with DaVinci Resolve
+- Slack Bot Token with `chat:write` scope
+- Internet access for Slack notifications
 
-⸻
+---
 
-Installation
+## Installation
 
-1. Script location
+### 1. Script location
 
 Copy the script into the Deliver scripts folder:
 
->~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Deliver/
+```~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Deliver/```
 
 Example structure:
 
-Deliver/
+```Deliver/
 ├── job_notif.py
 └── resolve_slack_settings/
-    └── resolve_slack_settings.json
+	└── resolve_slack_settings.json```
 
-2. First run (automatic config creation)
+---
+
+### 2. First run (automatic config creation)
 
 On first execution, if the configuration file does not exist, the script will create:
-resolve_slack_settings/resolve_slack_settings.json
+```resolve_slack_settings/resolve_slack_settings.json```
 
 with a template and stop execution.
 
 Edit the file before running again.
 
-⸻
+---
 
-Configuration File
+## Configuration File
 
+**Path**
+```
 resolve_slack_settings/resolve_slack_settings.json
 ```
 {
