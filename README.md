@@ -160,6 +160,22 @@ No silent failures.
 It only reacts to what Resolve explicitly provides at the end of a render job.
 
 ⸻
+Depending on the Python version installed on your system, SSL certificates may not be properly configured by default. This can prevent pip from accessing HTTPS resources.
+
+To fix this, run the official certificate installation script provided with Python.
+
+Python 3.10 example
+
+Open Terminal and run:
+
+```open /Applications/Python\ 3.10/Install\ Certificates.command```
+
+This script:
+- installs the required SSL root certificates
+- configures Python to trust system HTTPS connections
+- fixes common SSL: CERTIFICATE_VERIFY_FAILED errors when using pip
+
+_____
 
 License
 
