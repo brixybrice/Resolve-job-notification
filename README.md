@@ -160,6 +160,7 @@ No silent failures.
 It only reacts to what Resolve explicitly provides at the end of a render job.
 
 ⸻
+
 Depending on the Python version installed on your system, SSL certificates may not be properly configured by default. This can prevent pip from accessing HTTPS resources.
 
 To fix this, run the official certificate installation script provided with Python.
